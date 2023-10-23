@@ -29,7 +29,7 @@ sh [path_to_md_file] [attachment_folder] > [result_in_md_file]
 Here is an example markdown file that contains code blocks:
 
 ```markdown
-    ```
+    ```dot
     digraph { a->b }
     ```
 ```
