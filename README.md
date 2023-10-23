@@ -4,9 +4,9 @@
 
 ```markdown
 
-```
-text
-```
+    ```
+    text
+    ```
 
 ```
 
@@ -29,9 +29,9 @@ sh [path_to_md_file] [attachment_folder] > [result_in_md_file]
 Here is an example markdown file that contains code blocks:
 
 ```markdown
-```
-digraph { a->b }
-```
+    ```
+    digraph { a->b }
+    ```
 ```
 
 ![1 dot graph](./test_folder/1.svg)
@@ -51,6 +51,6 @@ Using **s4md**, this code block will be executed, and an SVG image will be creat
 
 This project is distributed under the MIT license. See the LICENSE file for details.
 
-## Authors and Contacts
+## Author
 
 Author: Jerzy Pavka
