@@ -12,8 +12,8 @@ while IFS= read -r line; do
 			case "$name" in
 				"dot")
 					output_image="$output_folder/$count.svg"
-					output_text=$(printf "\n![$count dot graph]($output_image)\n")
-					echo $input_text | dot -Tsvg -o $output_image
+					output_text=$(printf "\n\n![$count dot graph]($output_image)\n")
+					echo "$input_text" | dot -Tsvg -o $output_image
 					# echo $input_text | dot -Tsvg
 					((count++))
 					;;
@@ -29,7 +29,7 @@ while IFS= read -r line; do
 					printf "\`\`\`$name\n$input_text\n\`\`\`"
 					;;
 			esac
-			echo $output_text
+			echo "$output_text"
 			output_text=""
 			input_text=""
 			itsblock=0
@@ -42,7 +42,7 @@ while IFS= read -r line; do
 			input_text=$(printf "$input_text\n$line")
 			# echo \<!--$input_text--\>
 		else
-			echo $line
+			echo "$line"
 		fi
 	fi
 done < $input_file
